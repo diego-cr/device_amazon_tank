@@ -12,6 +12,7 @@ bin/thermald
 bin/thermal_manager
 
 #etc
+etc/media_profiles.xml
 etc/media_codecs_google_audio.xml
 etc/media_codecs_google_telephony.xml
 etc/media_codecs_google_video.xml
@@ -136,6 +137,7 @@ lib/libbluetooth_jni.so
 
 #vendor
 vendor/etc/audio_effects.conf
+vendor/lib/mediadrm/libdrmclearkeyplugin.so 
 vendor/lib/mediadrm/libmockdrmcryptoplugin.so
 vendor/lib/mediadrm/libplayreadydrmplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
