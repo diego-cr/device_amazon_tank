@@ -1,5 +1,5 @@
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
+$(call inherit-product, vendor/cm/config/common_full_tv.mk)
 
 # Inherit device configuration for Fire Phone
 $(call inherit-product, device/amazon/tank/full_tank.mk)

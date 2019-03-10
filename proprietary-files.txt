@@ -1,3 +1,5 @@
+framework/AWSRemoteConfigurationAndroidClient.jar
+
 #bin
 bin/wpa_supplicant
 bin/wmt_loader
