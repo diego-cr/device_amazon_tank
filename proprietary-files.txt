@@ -153,3 +153,10 @@ vendor/smartvolume/tank/wired_headset.csv
 #xbin
 xbin/trapz
 xbin/vitals_collection_agent
+
+#etc
+etc/.tp/.ht120.mtc
+etc/.tp/thermal.conf
+etc/.tp/thermal.off.conf
+etc/.tp/thermal.policy.conf
+
