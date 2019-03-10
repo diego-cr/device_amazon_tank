@@ -1,1 +1,1 @@
-add_lunch_combo cm_ford-userdebug
+add_lunch_combo cm_tank-userdebug

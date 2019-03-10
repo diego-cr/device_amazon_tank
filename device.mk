@@ -1,4 +1,4 @@
-LOCAL_PATH := device/amazon/ford
+LOCAL_PATH := device/amazon/tank
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
@@ -6,10 +6,10 @@ else
 	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
 
-DEVICE_FOLDER := device/amazon/ford
+DEVICE_FOLDER := device/amazon/tank
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/amazon/ford/ford-vendor.mk)
+$(call inherit-product-if-exists, vendor/amazon/tank/tank-vendor.mk)
 
 # Device overlay
 DEVICE_PACKAGE_OVERLAYS += $(DEVICE_FOLDER)/overlay
@@ -45,7 +45,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml
 
-$(call inherit-product-if-exists, vendor/amazon/ford/ford-vendor.mk)
+$(call inherit-product-if-exists, vendor/amazon/tank/tank-vendor.mk)
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -72,7 +72,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	su
 
-DEVICE_PACKAGE_OVERLAYS += device/amazon/ford/overlay
+DEVICE_PACKAGE_OVERLAYS += device/amazon/tank/overlay
 
 PRODUCT_COPY_FILES += \
 	$(LOCAL_KERNEL):kernel

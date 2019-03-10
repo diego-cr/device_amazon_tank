@@ -1,4 +1,4 @@
-OVERLAY_BIN := device/amazon/ford/overlay-binaries
+OVERLAY_BIN := device/amazon/tank/overlay-binaries
 
 # Install module to set selinux to permissive
 # Loaded by init.mt8127.rc

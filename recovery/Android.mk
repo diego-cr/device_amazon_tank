@@ -7,6 +7,6 @@ LOCAL_C_INCLUDES += system/core/fs_mgr/include
 LOCAL_SRC_FILES := default_device.cpp
 
 # should match TARGET_RECOVERY_UI_LIB set in BoardConfig.mk
-LOCAL_MODULE := librecovery_ui_ford
+LOCAL_MODULE := librecovery_ui_tank
 
 include $(BUILD_STATIC_LIBRARY)

@@ -1,18 +1,18 @@
 BOARD_VENDOR := amazon
 
 # headers
-TARGET_SPECIFIC_HEADER_PATH := device/amazon/ford/include
+TARGET_SPECIFIC_HEADER_PATH := device/amazon/tank/include
 
 # inherit from the proprietary version
--include vendor/amazon/ford/BoardConfigVendor.mk
+-include vendor/amazon/tank/BoardConfigVendor.mk
 
-TARGET_OTA_ASSERT_DEVICE := ford
+TARGET_OTA_ASSERT_DEVICE := tank
 
 
 # Platform
 TARGET_BOARD_PLATFORM := mt8127
 TARGET_BOARD_PLATFORM_GPU := mali-450
-TARGET_BOOTLOADER_BOARD_NAME := ford
+TARGET_BOOTLOADER_BOARD_NAME := tank
 
 # Bootloader
 TARGET_NO_BOOTLOADER := true
@@ -35,10 +35,10 @@ BOARD_KERNEL_PAGESIZE := 4096
 BOARD_HAS_MTK_HARDWARE := true
 MTK_HARDWARE := true
 
-TARGET_PREBUILT_KERNEL := device/amazon/ford/kernel
-TARGET_KERNEL_SOURCE := kernel/amazon/ford
-TARGET_KERNEL_CONFIG := ford_cyanogenmod_defconfig
-TARGET_KERNEL_VARIANT_CONFIG := ford_cyanogenmod_defconfig
+TARGET_PREBUILT_KERNEL := device/amazon/tank/kernel
+TARGET_KERNEL_SOURCE := kernel/amazon/tank
+TARGET_KERNEL_CONFIG := tank_cyanogenmod_defconfig
+TARGET_KERNEL_VARIANT_CONFIG := tank_cyanogenmod_defconfig
 
 # Flags
 TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
@@ -62,10 +62,10 @@ WIFI_DRIVER_FW_PATH_STA:=P2P
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_MTK := true
 BOARD_BLUETOOTH_DOES_NOT_USE_RFKILL := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/amazon/ford/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/amazon/tank/bluetooth
 
 # Graphics
-BOARD_EGL_CFG := device/amazon/ford/egl.cfg
+BOARD_EGL_CFG := device/amazon/tank/egl.cfg
 USE_OPENGL_RENDERER := true
 TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_OVERLAY := true
@@ -93,9 +93,9 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0.auto
 
 # Cyanogen recovery
 RECOVERY_VARIANT :=
-TARGET_RECOVERY_FSTAB := device/amazon/ford/recovery/root/recovery.fstab
-TARGET_RECOVERY_INITRC := device/amazon/ford/recovery/root/init.rc
-TARGET_RECOVERY_UI_LIB := librecovery_ui_ford
+TARGET_RECOVERY_FSTAB := device/amazon/tank/recovery/root/recovery.fstab
+TARGET_RECOVERY_INITRC := device/amazon/tank/recovery/root/init.rc
+TARGET_RECOVERY_UI_LIB := librecovery_ui_tank
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 BOARD_USES_MMCUTILS := true
 BOARD_HAS_LARGE_FILESYSTEM := true
@@ -108,10 +108,10 @@ TW_EXTERNAL_STORAGE_PATH := "/external_sd"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "/external_sd"
 
 # CUSTOM RELEASE TOOLS FOR EXTRA LINKS IN UPDATER-SCRIPT
-TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/amazon/ford/releasetools/ota_from_target_files
+TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/amazon/tank/releasetools/ota_from_target_files
 
 SELINUX_MODULE:
-	make -C device/amazon/ford/modules/selinux_permissive/ KERNEL=$(KERNEL_OUT) ARCH="arm" CROSS_COMPILE="arm-eabi-" MDIR="$(PWD)/device/amazon/ford/modules/selinux_permissive/" module
-	cp device/amazon/ford/modules/selinux_permissive/selinux_permissive.ko $(KERNEL_MODULES_OUT)/vcodec_kernel_driver.ko
+	make -C device/amazon/tank/modules/selinux_permissive/ KERNEL=$(KERNEL_OUT) ARCH="arm" CROSS_COMPILE="arm-eabi-" MDIR="$(PWD)/device/amazon/tank/modules/selinux_permissive/" module
+	cp device/amazon/tank/modules/selinux_permissive/selinux_permissive.ko $(KERNEL_MODULES_OUT)/vcodec_kernel_driver.ko
     
 TARGET_KERNEL_MODULES := SELINUX_MODULE

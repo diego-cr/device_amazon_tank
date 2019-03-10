@@ -15,7 +15,7 @@
 # limitations under the License.
 
 """
-A shim to generate an OTA for ford
+A shim to generate an OTA for tank
 """
 
 import sys
