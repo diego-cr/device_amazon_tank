@@ -26,6 +26,10 @@ etc/firmware/ROMv2_patch_1_1_hdr.bin
 etc/firmware/WMT_SOC.cfg
 etc/bluetooth/bt_did.conf
 etc/bluetooth/bt_stack.conf
+etc/.tp/.ht120.mtc
+etc/.tp/thermal.conf
+etc/.tp/thermal.off.conf
+etc/.tp/thermal.policy.conf
 
 #lib
 #framework/fosinit.jar
@@ -153,10 +157,4 @@ vendor/smartvolume/tank/wired_headset.csv
 #xbin
 xbin/trapz
 xbin/vitals_collection_agent
-
-#etc
-etc/.tp/.ht120.mtc
-etc/.tp/thermal.conf
-etc/.tp/thermal.off.conf
-etc/.tp/thermal.policy.conf
 
