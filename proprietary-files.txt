@@ -41,7 +41,6 @@ lib/libaudiospdif.so
 lib/egl/libEGL_mali.so
 lib/egl/libGLESv1_CM_mali.so
 lib/egl/libGLESv2_mali.so
-lib/libGLESv3.so
 lib/libMali.so
 lib/libmtk_mali_user.so
 lib/hw/hwcomposer.mt8127.so
