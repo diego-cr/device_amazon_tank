@@ -1,4 +1,4 @@
 mount("ext4", "EMMC", "/dev/block/platform/mtk-msdc.0/by-name/system", "/system", "");
-symlink("/system/framework/services.jar", "/system/framework/fosservices.jar");
-symlink("/system/framework/framework.jar", "/system/framework/fosframework.jar");
+#symlink("/system/framework/services.jar", "/system/framework/fosservices.jar");
+#symlink("/system/framework/framework.jar", "/system/framework/fosframework.jar");
 unmount("/system");

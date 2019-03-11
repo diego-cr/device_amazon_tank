@@ -91,6 +91,12 @@ BLOCK_BASED_OTA := false
 # Vold
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0.auto/gadget/lun%d/file
 
+
+# CM Hardware
+BOARD_USES_CYANOGEN_HARDWARE := true
+BOARD_HARDWARE_CLASS += \
+    hardware/cyanogen/cmhw
+
 # Cyanogen recovery
 RECOVERY_VARIANT :=
 TARGET_RECOVERY_FSTAB := device/amazon/tank/recovery/root/recovery.fstab

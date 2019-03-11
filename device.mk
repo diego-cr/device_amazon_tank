@@ -37,7 +37,8 @@ $(call inherit-product-if-exists, vendor/amazon/tank/tank-vendor.mk)
 
 # Audio
 PRODUCT_PACKAGES += \
-	audio.a2dp.default
+	audio.a2dp.default \
+	#libtinycompress
     
 # Bluetooth
 PRODUCT_PACKAGES += \
