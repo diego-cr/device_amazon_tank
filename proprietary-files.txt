@@ -27,8 +27,12 @@ etc/wifi/wpa_supplicant_overlay.conf
 etc/firmware/ROMv2_patch_1_0_hdr.bin
 etc/firmware/ROMv2_patch_1_1_hdr.bin
 etc/firmware/WMT_SOC.cfg
+etc/bluetooth/auto_pair_devlist.conf
 etc/bluetooth/bt_did.conf
+etc/bluetooth/btmac.sh
 etc/bluetooth/bt_stack.conf
+etc/bluetooth/bt_vendor.conf
+etc/bluetooth/rfkill_bt.sh
 etc/.tp/.ht120.mtc
 etc/.tp/thermal.conf
 etc/.tp/thermal.off.conf
@@ -182,4 +186,5 @@ vendor/smartvolume/tank/wired_headset.csv
 #xbin
 xbin/trapz
 xbin/vitals_collection_agent
+xbin/wl
 
