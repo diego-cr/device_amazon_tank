@@ -47,21 +47,35 @@ COMMON_GLOBAL_CFLAGS += -DMTK_HARDWARE -DREFRESH_RATE=60
 COMMON_GLOBAL_CFLAGS += -DAMAZON_LOG -DADD_LEGACY_ACQUIRE_BUFFER_SYMBOL
 COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 
-WPA_SUPPLICANT_VERSION := VER_0_8_X
-BOARD_WPA_SUPPLICANT_DRIVER := NL80211
-BOARD_HOSTAPD_DRIVER := NL80211
-BOARD_WLAN_DEVICE := mt66xx
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
-BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
-WIFI_DRIVER_FW_PATH_PARAM:="/dev/wmtWifi"
-WIFI_DRIVER_FW_PATH_STA:=STA
-WIFI_DRIVER_FW_PATH_AP:=AP
-WIFI_DRIVER_FW_PATH_STA:=P2P
+#WPA_SUPPLICANT_VERSION := VER_0_8_X
+#BOARD_WPA_SUPPLICANT_DRIVER := NL80211
+#BOARD_HOSTAPD_DRIVER := NL80211
+#BOARD_WLAN_DEVICE := mt66xx
+#BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
+#BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
+#WIFI_DRIVER_FW_PATH_PARAM:="/dev/wmtWifi"
+#WIFI_DRIVER_FW_PATH_STA:=STA
+#WIFI_DRIVER_FW_PATH_AP:=AP
+#WIFI_DRIVER_FW_PATH_STA:=P2P
 
-# BT
+# WIFI
+BOARD_WPA_SUPPLICANT_DRIVER := NL80211
+WPA_SUPPLICANT_VERSION      := VER_0_8_X
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_bcmdhd
+#BOARD_HOSTAPD_DRIVER        := NL80211
+#BOARD_HOSTAPD_PRIVATE_LIB   := lib_driver_cmd_bcmdhd
+BOARD_WLAN_DEVICE           := bcmdhd
+WIFI_DRIVER_FW_PATH_PARAM   := "/sys/module/bcmdhd/parameters/firmware_path"
+#WIFI_DRIVER_FW_PATH_STA     := "/vendor/firmware/brcm/bcm43569a2-firmware.bin"
+#WIFI_DRIVER_FW_PATH_AP      := "/system/vendor/firmware/fw_wifi_apsta_4334.bin"
+#WIFI_DRIVER_FW_PATH_P2P     := "/system/vendor/firmware/fw_wifi_p2p_4334.bin"
+WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/bcmdhd.ko"
+WIFI_DRIVER_MODULE_NAME     := "bcmdhd"
+#WIFI_DRIVER_MODULE_ARG      := "firmware_path=/vendor/firmware/brcm/bcm43569a2-firmware.bin nvram_path=/vendor/firmware/brcm/bcm43569a2.nvm iface_name=wlan0"
+
+# Bluetooth defines
 BOARD_HAVE_BLUETOOTH := true
-BOARD_HAVE_BLUETOOTH_MTK := true
-BOARD_BLUETOOTH_DOES_NOT_USE_RFKILL := true
+BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/amazon/tank/bluetooth
 
 # Graphics
@@ -93,8 +107,8 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0.auto
 
 
 # CM Hardware
-BOARD_USES_CYANOGEN_HARDWARE := true
-BOARD_HARDWARE_CLASS += \
+#BOARD_USES_CYANOGEN_HARDWARE := true
+#BOARD_HARDWARE_CLASS += \
     hardware/cyanogen/cmhw
 
 # Cyanogen recovery
@@ -116,8 +130,8 @@ TW_EXTERNAL_STORAGE_MOUNT_POINT := "/external_sd"
 # CUSTOM RELEASE TOOLS FOR EXTRA LINKS IN UPDATER-SCRIPT
 TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/amazon/tank/releasetools/ota_from_target_files
 
-SELINUX_MODULE:
-	make -C device/amazon/tank/modules/selinux_permissive/ KERNEL=$(KERNEL_OUT) ARCH="arm" CROSS_COMPILE="arm-eabi-" MDIR="$(PWD)/device/amazon/tank/modules/selinux_permissive/" module
-	cp device/amazon/tank/modules/selinux_permissive/selinux_permissive.ko $(KERNEL_MODULES_OUT)/vcodec_kernel_driver.ko
+#SELINUX_MODULE:
+#	make -C device/amazon/tank/modules/selinux_permissive/ KERNEL=$(KERNEL_OUT) ARCH="arm" CROSS_COMPILE="arm-eabi-" MDIR="$(PWD)/device/amazon/tank/modules/selinux_permissive/" module
+#	cp device/amazon/tank/modules/selinux_permissive/selinux_permissive.ko $(KERNEL_MODULES_OUT)/vcodec_kernel_driver.ko
     
-TARGET_KERNEL_MODULES := SELINUX_MODULE
+#TARGET_KERNEL_MODULES := SELINUX_MODULE

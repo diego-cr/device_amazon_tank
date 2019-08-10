@@ -1,5 +1,3 @@
-#framework/AWSRemoteConfigurationAndroidClient.jar
-
 #bin
 bin/wpa_supplicant
 bin/wmt_loader
@@ -12,14 +10,6 @@ bin/nvram_agent_binder
 bin/nvram_daemon
 bin/thermald
 bin/thermal_manager
-
-bin/auto_hdmi.sh
-bin/mt8127_hdmi
-
-bin/akmd09911
-bin/akmd8963
-
-#priv-app/SystemStatusMonitor/SystemStatusMonitor.apk
 
 #etc
 etc/media_profiles.xml
@@ -46,7 +36,14 @@ etc/.tp/thermal.conf
 etc/.tp/thermal.off.conf
 etc/.tp/thermal.policy.conf
 
+vendor/firmware/BCM43569A2_001.003.004.0148.0000.hcd
+vendor/firmware/brcm/bcm43569a2-firmware.bin
+vendor/firmware/brcm/bcm43569a2-firmware-test.bin
+vendor/firmware/brcm/bcm43569a2.nvm
+
 #lib
+#lib/libwifi-service.so
+#lib/libhardware_legacy.so
 lib/libwlfAmzn.so
 lib/libwlm.so
 lib/libusb.so
@@ -76,9 +73,18 @@ lib/egl/libGLESv2_mali.so
 lib/libMali.so
 lib/libmtk_mali_user.so
 lib/hw/hwcomposer.mt8127.so
-#lib/hw/audio.primary.mt8127.so
-lib/hw/audio_policy.stub.so
-lib/hw/audio.r_submix.default.so
+
+#lib/hw/audio.a2dp.default.so
+#lib/hw/audio.btle.default.so
+#lib/hw/audio_policy.default.so
+#lib/hw/audio_policy.stub.so
+#lib/hw/audio.primary.default.so
+lib/hw/audio.primary.mt8127.so
+#lib/hw/audio.r_submix.default.so
+lib/hw/audio.sco.mt8127.so
+#lib/hw/audio.usb.default.so
+#lib/libaudiopolicymanagerdefault.so
+
 lib/hw/gralloc.mt8127.so
 lib/hw/hdmi_cec.default.so
 lib/hw/keystore.mt8127.so
@@ -168,7 +174,8 @@ lib/libvp8dec_sa.ca7.so
 lib/libvp9dec_sa.ca7.so
 lib/libwpa_client.so
 
-#lib/libbluetooth_jni.so
+lib/libbluetooth_jni.so
+#lib/hw/bluetooth.default.so
 
 #vendor
 vendor/etc/audio_effects.conf
@@ -193,6 +200,6 @@ vendor/smartvolume/tank/wired_headset.csv
 
 #xbin
 xbin/trapz
-#xbin/vitals_collection_agent
+xbin/vitals_collection_agent
 xbin/wl
 
