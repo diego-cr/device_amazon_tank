@@ -28,9 +28,10 @@ TARGET_CPU_SMP := true
 
 # Kernel Config
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x04000000 --tags_offset 0x00000100
-BOARD_KERNEL_CMDLINE :=
+BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 4096
+BOARD_PAGE_SIZE := 0x800
 
 BOARD_HAS_MTK_HARDWARE := true
 MTK_HARDWARE := true
@@ -58,20 +59,19 @@ COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 #WIFI_DRIVER_FW_PATH_AP:=AP
 #WIFI_DRIVER_FW_PATH_STA:=P2P
 
-# WIFI
-BOARD_WPA_SUPPLICANT_DRIVER := NL80211
+# Wifi related defines
 WPA_SUPPLICANT_VERSION      := VER_0_8_X
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_bcmdhd
-#BOARD_HOSTAPD_DRIVER        := NL80211
-#BOARD_HOSTAPD_PRIVATE_LIB   := lib_driver_cmd_bcmdhd
 BOARD_WLAN_DEVICE           := bcmdhd
+BOARD_WPA_SUPPLICANT_DRIVER := NL80211
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
+BOARD_HOSTAPD_DRIVER        := NL80211
+BOARD_HOSTAPD_PRIVATE_LIB   := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
 WIFI_DRIVER_FW_PATH_PARAM   := "/sys/module/bcmdhd/parameters/firmware_path"
-#WIFI_DRIVER_FW_PATH_STA     := "/vendor/firmware/brcm/bcm43569a2-firmware.bin"
-#WIFI_DRIVER_FW_PATH_AP      := "/system/vendor/firmware/fw_wifi_apsta_4334.bin"
-#WIFI_DRIVER_FW_PATH_P2P     := "/system/vendor/firmware/fw_wifi_p2p_4334.bin"
+#WIFI_DRIVER_FW_PATH_AP      := "/vendor/firmware/fw_bcmdhd_apsta.bin"
+#WIFI_DRIVER_FW_PATH_STA     := "/vendor/firmware/fw_bcmdhd.bin"
+WIFI_DRIVER_FW_PATH_STA     := "/vendor/firmware/brcm/bcm43569a2-firmware.bin"
 WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/bcmdhd.ko"
 WIFI_DRIVER_MODULE_NAME     := "bcmdhd"
-#WIFI_DRIVER_MODULE_ARG      := "firmware_path=/vendor/firmware/brcm/bcm43569a2-firmware.bin nvram_path=/vendor/firmware/brcm/bcm43569a2.nvm iface_name=wlan0"
 
 # Bluetooth defines
 BOARD_HAVE_BLUETOOTH := true

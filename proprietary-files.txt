@@ -190,6 +190,10 @@ vendor/smartvolume/tank/dgtl_dock_headeset.csv
 vendor/smartvolume/tank/speaker.csv
 vendor/smartvolume/tank/wired_headphone.csv
 vendor/smartvolume/tank/wired_headset.csv
+vendor/firmware/brcm/bcm43569a2-firmware.bin
+vendor/firmware/brcm/bcm43569a2-firmware-test.bin
+vendor/firmware/brcm/bcm43569a2.nvm
+vendor/firmware/BCM43569A2_001.003.004.0148.0000.hcd
 
 #xbin
 xbin/trapz
