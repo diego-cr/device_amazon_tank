@@ -76,7 +76,11 @@ lib/egl/libGLESv2_mali.so
 lib/libMali.so
 lib/libmtk_mali_user.so
 lib/hw/hwcomposer.mt8127.so
-#lib/hw/audio.primary.mt8127.so
+lib/hw/audio.btle.default.so
+lib/hw/audio.a2dp.default.so
+lib/hw/audio.sco.mt8127.so
+lib/hw/audio.usb.default.so
+lib/hw/audio.primary.mt8127.so
 lib/hw/audio_policy.stub.so
 lib/hw/audio.r_submix.default.so
 lib/hw/gralloc.mt8127.so
@@ -85,6 +89,7 @@ lib/hw/keystore.mt8127.so
 lib/hw/memtrack.mt8127.so
 lib/hw/perfboost.mt8127.so
 lib/hw/thermal.mt8127.so
+lib/hw/tv_input.default.so
 lib/modules/bcmdhd.ko
 lib/modules/ozwpan.ko
 lib/libdpframework.so
@@ -194,7 +199,6 @@ vendor/firmware/brcm/bcm43569a2-firmware.bin
 vendor/firmware/brcm/bcm43569a2-firmware-test.bin
 vendor/firmware/brcm/bcm43569a2.nvm
 vendor/firmware/BCM43569A2_001.003.004.0148.0000.hcd
-
 #xbin
 xbin/trapz
 #xbin/vitals_collection_agent
