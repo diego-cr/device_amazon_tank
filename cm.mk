@@ -9,3 +9,9 @@ TARGET_SCREEN_HEIGHT := 1024
 
 PRODUCT_NAME := cm_tank
 PRODUCT_RELEASE_NAME := tank
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DESC="full_tank-user 5.1.1 LVY48F 288.6.3.9_user_639566220 release-keys"
+
+BUILD_FINGERPRINT := Amazon/full_tank/tank:5.1.1/LVY48F/288.6.3.9_user_639566220:user/release-keys
+
