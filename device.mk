@@ -36,6 +36,9 @@ PRODUCT_COPY_FILES += \
 
 $(call inherit-product-if-exists, vendor/amazon/tank/tank-vendor.mk)
 
+PRODUCT_PACKAGES += \
+        LatinIME
+
 # Audio
 PRODUCT_PACKAGES += \
 	audio.a2dp.default \
