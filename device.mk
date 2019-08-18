@@ -39,13 +39,16 @@ $(call inherit-product-if-exists, vendor/amazon/tank/tank-vendor.mk)
 # Audio
 PRODUCT_PACKAGES += \
 	audio.a2dp.default \
-	#libtinycompress
-  
-PRODUCT_PACKAGES += \
-    audio.a2dp.default \
-    audio.usb.default \
-    audio.r_submix.default \
-    libaudio-resampler
+	libtinycompress \
+        audio.usb.default \
+        audio.r_submix.default \
+	audio.r_submix.mt8127 \
+	audio_policy.stub \
+	libaudioroute \
+	libtinyalsa \
+        libalsautils \
+        libaudio-resampler
+	
 
 # Add WiFi Firmware
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4356/device-bcm.mk)
