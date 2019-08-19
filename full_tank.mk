@@ -20,7 +20,7 @@ PRODUCT_COPY_FILES += \
 
 
 # Device overlay
-DEVICE_PACKAGE_OVERLAYS += $(DEVICE)/overlay
+DEVICE_PACKAGE_OVERLAYS += device/amazon/tank/overlay
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
@@ -55,9 +55,9 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:system/etc/media_codecs_google_video_le.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
-    $(DEVICE)/configs/media_codecs.xml:system/etc/media_codecs.xml \
-    $(DEVICE)/configs/media_profiles.xml:system/etc/media_profiles.xml \
-    $(DEVICE)/configs/mtk_omx_core.cfg:system/etc/mtk_omx_core.cfg
+    device/amazon/tank/configs/media_codecs.xml:system/etc/media_codecs.xml \
+    device/amazon/tank/configs/media_profiles.xml:system/etc/media_profiles.xml \
+    device/amazon/tank/configs/mtk_omx_core.cfg:system/etc/mtk_omx_core.cfg
 
 # Audio
 PRODUCT_PACKAGES += \
