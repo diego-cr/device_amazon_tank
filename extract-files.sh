@@ -17,7 +17,7 @@
 set -e
 
 VENDOR=amazon
-DEVICE_COMMON=austin
+DEVICE_COMMON=tank
 
 # Load extractutils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"

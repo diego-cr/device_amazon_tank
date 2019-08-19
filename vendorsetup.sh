@@ -1,1 +1,1 @@
-add_lunch_combo cm_austin-userdebug
+add_lunch_combo cm_tank-userdebug
