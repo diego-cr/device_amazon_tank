@@ -8,6 +8,17 @@ PRODUCT_MODEL := Fire
 PRODUCT_MANUFACTURER := amzn
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+        LOCAL_KERNEL := $(LOCAL_PATH)/boot.img
+else
+        LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+endif
+
+PRODUCT_COPY_FILES += \
+        $(LOCAL_KERNEL):kernel
+
+
+
 # Device overlay
 DEVICE_PACKAGE_OVERLAYS += $(DEVICE)/overlay
 

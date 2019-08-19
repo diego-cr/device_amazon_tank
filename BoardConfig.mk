@@ -12,6 +12,8 @@ TARGET_OTA_ASSERT_DEVICE := tank
 TARGET_BOARD_PLATFORM := mt8127
 TARGET_BOARD_PLATFORM_GPU := mali-450mp4
 
+DALVIK_VM_LIB := true
+
 # Bootloader
 TARGET_NO_BOOTLOADER := true
 
@@ -63,7 +65,7 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/amazon/tank/bluetooth
 
 # Graphics
-BOARD_EGL_CFG := $(DEVICE)/configs/egl.cfg
+BOARD_EGL_CFG := device/amazon/tank/configs/egl.cfg
 USE_OPENGL_RENDERER := true
 TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_OVERLAY := true
