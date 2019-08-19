@@ -8,9 +8,6 @@ TARGET_SPECIFIC_HEADER_PATH := device/amazon/tank/include
 
 TARGET_OTA_ASSERT_DEVICE := tank
 
-# inherit from the proprietary version
--include $(VENDOR_COMMON)/BoardConfigVendor.mk
-
 # Platform
 TARGET_BOARD_PLATFORM := mt8127
 TARGET_BOARD_PLATFORM_GPU := mali-450mp4

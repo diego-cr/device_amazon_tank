@@ -1,8 +1,8 @@
 # Inherit from hardware-specific part of the product configuration
-$(call inherit-product, device/amazon/tank/device.mk)
+#$(call inherit-product, device/amazon/tank/device.mk)
 
 PRODUCT_DEVICE := tank
-PRODUCT_NAME := full_tank
+PRODUCT_NAME := cm_tank
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Fire
 PRODUCT_MANUFACTURER := amzn
