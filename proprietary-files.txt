@@ -28,6 +28,7 @@ bin/atcid
 #bin/audiocli
 bin/audiocmdservice_atci
 bin/auto_shutdown.sh
+bin/auto_hdmi.sh
 #bin/autobt
 bin/devicetype_service
 bin/display
@@ -44,6 +45,7 @@ bin/kisd
 bin/meta_tst
 bin/mmp
 bin/msensord
+bin/mt8127_hdmi
 bin/nvram_agent_binder
 bin/nvram_daemon
 bin/pq
@@ -62,6 +64,10 @@ etc/firmware/ROMv2_patch_1_0_hdr.bin
 etc/firmware/ROMv2_patch_1_1_hdr.bin
 #etc/firmware/WIFI_RAM_CODE_8127
 etc/firmware/WMT_SOC.cfg
+vendor/firmware/brcm/bcm43569a2-firmware.bin
+vendor/firmware/brcm/bcm43569a2-firmware-test.bin
+vendor/firmware/brcm/bcm43569a2.nvm
+vendor/firmware/BCM43569A2_001.003.004.0148.0000.hcd
 etc/monitoring.conf
 etc/wifi/p2p_supplicant_overlay.conf
 etc/wifi/wpa_supplicant_overlay.conf
@@ -69,12 +75,15 @@ etc/wifi/wpa_supplicant.conf
 lib/egl/libEGL_mali.so
 lib/egl/libGLESv1_CM_mali.so
 lib/egl/libGLESv2_mali.so
+lib/hw/audio.btle.default.so
+lib/hw/audio.a2dp.default.so
 lib/hw/audio_policy.default.so
 lib/hw/audio_policy.stub.so
 lib/hw/audio.primary.default.so
 lib/hw/audio.primary.mt8127.so
 lib/hw/audio.r_submix.default.so
 #lib/hw/audio.sco.default.so
+lib/hw/audio.sco.mt8127.so
 lib/hw/audio.usb.default.so
 #lib/hw/camera.mt8127.so
 lib/hw/gralloc.default.so
@@ -90,6 +99,7 @@ lib/hw/perfboost.mt8127.so
 lib/hw/power.default.so
 #lib/hw/sensors.mt8127.so
 lib/hw/thermal.mt8127.so
+lib/hw/tv_input.default.so
 lib/hw/vibrator.default.so
 lib/lib_uree_mtk_crypto.so
 lib/lib_uree_mtk_video_secure_al.so
@@ -109,6 +119,7 @@ lib/libblisrc32.so
 #lib/libblueshift-audioprocessing.so
 #lib/libblueshift-opus.so
 #lib/libbluetooth_hw_test.so
+lib/libbluetooth_jni.so
 #lib/libbluetooth_mtk_pure.so
 #lib/libbluetooth_mtk.so
 #lib/libbluetooth_relayer.so
