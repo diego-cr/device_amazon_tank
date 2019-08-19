@@ -66,7 +66,7 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/amazon/tank/bluetooth
 
 # Graphics
-BOARD_EGL_CFG := $(DEVICE_COMMON)/configs/egl.cfg
+BOARD_EGL_CFG := $(DEVICE)/configs/egl.cfg
 USE_OPENGL_RENDERER := true
 TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_OVERLAY := true
