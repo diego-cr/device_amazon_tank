@@ -22,6 +22,7 @@ bin/akmd8963
 #priv-app/SystemStatusMonitor/SystemStatusMonitor.apk
 
 #etc
+etc/audio_policy.conf
 etc/media_profiles.xml
 etc/media_codecs_google_audio.xml
 etc/media_codecs_google_telephony.xml
@@ -102,6 +103,7 @@ lib/libaudiocomponentengine.so
 lib/libaudiocustparam.so
 lib/libaudiodcrflt.so
 lib/libaudiosetting.so
+lib/libaudiopolicymanagerdefault.so
 lib/libbessound_hd_mtk.so
 lib/libbessound_mtk.so
 lib/libblisrc32.so
